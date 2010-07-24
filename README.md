@@ -50,7 +50,10 @@ In order to update all elements matching the registered selectors you can use
 
 	Matcher.update();
 
-To keep up speed, if you only have certain content areas updated in your application you can also pass an element. Depending on the complexity of your selector, this may not update all elements (think "body > div" won't match on any element within the page).
+Ideally you should execute this call right after any Request to the Server.
+
+
+To keep everything fast, if you only have certain content areas updated in your application you can also pass an element. Depending on the complexity of your selector, this may not update all elements (think "body > div" won't match on any element within the page).
 
 	Matcher.update(element); // Only update elements within the provided element
 
