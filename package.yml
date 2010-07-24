@@ -1,0 +1,17 @@
+name: "DynamicMatcher"
+
+exports: "dynamic-matcher.js"
+
+web: "[cpojer.net](http://cpojer.net)"
+
+description: "Searches elements via complex selectors and executes functions on them."
+
+license: "[MIT License](http://mootools.net/license.txt)"
+
+copyright: "&copy; [Christoph Pojer](http://cpojer.net/)"
+
+author: "cpojer"
+authors: "[Christoph Pojer](http://cpojer.net)"
+
+sources:
+    - "Source/DynamicMatcher.js"
