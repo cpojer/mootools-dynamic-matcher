@@ -53,11 +53,16 @@ this.DynamicMatcher = new Class({
 	update: function(element){
 		element = document.id(element) || document;
 
-		var handlers = this.handlers,
+		var isDocument = (element == document),
+			handlers = this.handlers,
 			expressions = this.expressions;
 
 		for (var i = 0, l = handlers.length; i < l; i++){
-			var elements = element.getElements(expressions[i]);
+			var expression = expressions[i],
+				elements = element.getElements(expression);
+			
+			if (!isDocument && element.match(expression)) elements.push(element);
+			
 			if (elements.length) handlers[i](elements);
 		}
 

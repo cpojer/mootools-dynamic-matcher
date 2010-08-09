@@ -93,7 +93,7 @@ describe('Dynamic Matcher', function(){
 		expect(updated == document.id('test')).toBeTruthy();
 	});
 	
-	it('should not fire on the updated element', function(){
+	it('should fire on the updated element', function(){
 		var Matcher = new DynamicMatcher;
 		
 		var fired = false;
@@ -103,7 +103,7 @@ describe('Dynamic Matcher', function(){
 		
 		Matcher.update(document.getElement('div#test a'));
 		
-		expect(fired).toBeFalsy();
+		expect(fired).toBeTruthy();
 	});
 	
 });
