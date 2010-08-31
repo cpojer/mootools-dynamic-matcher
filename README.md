@@ -11,6 +11,10 @@ Build via [Packager](http://github.com/kamicane/packager), requires [MooTools Co
 	./packager register /path/to/dynamic-matcher
 	./packager build DynamicMatcher/* > dynamic-matcher.js
 
+To build this plugin without external dependencies use
+
+	./packager build DynamicMatcher/* +use-only DynamicMatcher > dynamic-matcher.js
+
 How To Use
 ----------
 
