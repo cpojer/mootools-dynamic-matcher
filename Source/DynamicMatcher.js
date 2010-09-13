@@ -42,8 +42,8 @@ this.DynamicMatcher = new Class({
 			expressions = this.expressions;
 
 		for (var i = 0, l = handlers.length; i < l; i++) if (expression == expressions[i] && fn == handlers[i]){
-			handlers.splice(i, 1);
-			expressions.splice(i, 1);
+			delete handlers[i];
+			delete expressions[i];
 			break;
 		}
 
@@ -58,11 +58,12 @@ this.DynamicMatcher = new Class({
 			expressions = this.expressions;
 
 		for (var i = 0, l = handlers.length; i < l; i++){
-			var expression = expressions[i],
-				elements = element.getElements(expression);
-			
+			var expression = expressions[i];
+			if (!expression) continue;
+
+			var elements = element.getElements(expression);
 			if (!isDocument && element.match(expression)) elements.push(element);
-			
+
 			if (elements.length) handlers[i](elements);
 		}
 
