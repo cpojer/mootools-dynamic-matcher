@@ -106,6 +106,30 @@ describe('Dynamic Matcher', function(){
 		expect(fired).toBeTruthy();
 	});
 	
+	it('should allow to unregister during an update', function(){
+		var Matcher = new DynamicMatcher;
+		
+		var list = [];
+		Matcher.register('a', function(){
+			list.push(1);
+		});
+		
+		var two = function(){
+			list.push(2);
+			Matcher.unregister('a', two);
+		};
+		
+		Matcher.register('a', two);
+		
+		Matcher.register('a', function(){
+			list.push(3);
+		});
+		
+		Matcher.update();
+		
+		expect(list).toEqual([1, 2, 3]);
+	});
+	
 });
 
 })();
