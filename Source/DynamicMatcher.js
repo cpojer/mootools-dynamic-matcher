@@ -67,7 +67,7 @@ this.DynamicMatcher = new Class({
 			if (elements.length) handlers[i](elements);
 		}
 
-		this.triggerEvent('update', [element]);
+		this.fireEvent('update', [element]);
 
 		return this;
 	}
