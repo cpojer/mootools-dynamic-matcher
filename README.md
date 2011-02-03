@@ -3,17 +3,22 @@ DynamicMatcher
 
 Searches elements via complex selectors and executes functions on them. Very useful to define behavior for certain elements or when you control all content via XHR. Also might be of use if you have no control of the markup. Requires MooTools Core 1.3.
 
+This Plugin is part of MooTools [PowerTools!](http://cpojer.net/PowerTools).
+
+* [Build PowerTools!](http://cpojer.net/PowerTools)
+* [Fork PowerTools!](https://github.com/cpojer/PowerTools)
+
 Build
 -----
 
 Build via [Packager](http://github.com/kamicane/packager), requires [MooTools Core](http://github.com/mootools/mootools-core) to be registered to Packager already
 
-	./packager register /path/to/dynamic-matcher
-	./packager build DynamicMatcher/* > dynamic-matcher.js
+	packager register /path/to/dynamic-matcher
+	packager build DynamicMatcher/* > dynamic-matcher.js
 
 To build this plugin without external dependencies use
 
-	./packager build DynamicMatcher/* +use-only DynamicMatcher > dynamic-matcher.js
+	packager build DynamicMatcher/* +use-only DynamicMatcher > dynamic-matcher.js
 
 How To Use
 ----------
