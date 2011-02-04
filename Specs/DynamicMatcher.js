@@ -130,6 +130,41 @@ describe('Dynamic Matcher', function(){
 		expect(list).toEqual([1, 2, 3]);
 	});
 	
+	it('should allow to register and unregister an object', function(){
+		var Matcher = new DynamicMatcher;
+		
+		var list = [];
+		var one = function(){
+			list.push(1);
+		};
+		
+		var two = function(){
+			list.push(2);
+		};
+		
+		var three = function(){
+			list.push(3);
+		};
+		
+		Matcher.register({
+			a: one,
+			div: two,
+			p: three
+		});
+		
+		Matcher.update();
+		expect(list).toEqual([1, 2, 3]);
+		
+		Matcher.unregister({
+			a: one,
+			div: two,
+			p: three
+		});
+		
+		Matcher.update();
+		expect(list).toEqual([1, 2, 3]);
+	});
+	
 });
 
 })();

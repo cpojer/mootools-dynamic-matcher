@@ -35,7 +35,7 @@ this.DynamicMatcher = new Class({
 		this.handlers.push(fn);
 
 		return this;
-	},
+	}.overloadSetter(),
 
 	unregister: function(expression, fn){
 		var handlers = this.handlers,
@@ -48,7 +48,7 @@ this.DynamicMatcher = new Class({
 		}
 
 		return this;
-	},
+	}.overloadSetter(),
 
 	update: function(element){
 		element = document.id(element) || document;

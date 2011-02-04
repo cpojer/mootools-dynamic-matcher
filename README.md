@@ -55,11 +55,30 @@ You can also unregister via
 
 	Matcher.unregister('the selector', theListener);
 
+Both methods also take an object of selectors and functions
+	
+	var anchorHandler = function(anchors){
+		// do something
+	};
+	
+	Matcher.register({
+		a: anchorHandler,
+		
+		div: function(divElements){
+			// do something else
+		}
+	});
+	
+	Matcher.unregister({
+		a: anchorHandler,
+		p: someOtherFn
+	});
+
 In order to update all elements matching the registered selectors you can use
 
 	Matcher.update();
 
-Ideally you should execute this call right after any Request to the Server.
+Ideally you should execute this call right after receiving and adopting the results of a request to the Server.
 
 
 To keep everything fast, if you only have certain content areas updated in your application you can also pass an element. Depending on the complexity of your selector, this may not update all elements (think "body > div" won't match on any element within the page).
