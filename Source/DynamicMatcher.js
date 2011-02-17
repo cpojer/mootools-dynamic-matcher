@@ -74,4 +74,4 @@ this.DynamicMatcher = new Class({
 
 });
 
-})();
+}).call(this);
