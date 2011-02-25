@@ -1,7 +1,9 @@
 DynamicMatcher
 ==============
 
-Searches elements via complex selectors and executes functions on them. Very useful to define behavior for certain elements or when you control all content via XHR. Also might be of use if you have no control of the markup. Requires MooTools Core 1.3.
+Searches elements via complex selectors and executes functions on them. Very useful to define behavior for certain elements or when you control all content via XHR. Also might be of use if you have no control of the markup.
+
+![Screenshot](http://cpojer.net/Logo/dynamic-matcher.png)
 
 This Plugin is part of MooTools [PowerTools!](http://cpojer.net/PowerTools).
 

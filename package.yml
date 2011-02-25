@@ -12,6 +12,8 @@ copyright: "&copy; [Christoph Pojer](http://cpojer.net/)"
 
 author: "cpojer"
 authors: "[Christoph Pojer](http://cpojer.net)"
+category: Utilities
+tags: [dynamic, content, update, matcher, selector, request]
 
 sources:
     - "Source/DynamicMatcher.js"
